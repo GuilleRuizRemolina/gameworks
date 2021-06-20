@@ -1,0 +1,51 @@
+.menu {
+  background-color: $background-grey-dark;
+  border-radius: 0;
+
+  .ui.grid {
+    margin: 0;
+  }
+
+  //asi afecta tanto a la parte izquierda como a la derecha
+  &__left,
+  &__right {
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+
+    .ui.menu {
+      border: 0;
+      box-shadow: none;
+      height: 100%;
+      background: transparent;
+
+      .icon {
+        margin-right: 10px !important;
+        color: $primary;
+      }
+
+      .item {
+        color: $font-light;
+        border-radius: 0 !important;
+
+        &:hover {
+          color: $font-light;
+          background-color: $background-dark-absolute;
+          &:before {
+            background-color: $background-dark-absolute;
+          }
+        }
+
+        &.n-0 i {
+          //actua sobre el icono
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,23 @@
+.basic-layout {
+  min-height: 100vh;
+  background-image: url("https://gameworks-ecommerce.s3.eu-west-3.amazonaws.com/1575055138_1786360505_preview_Brave_Optimal_Baleenwhale_small_1fe4009120.gif");
+  background-size: cover;
+  background-position: bottom;
+
+  .content {
+    background-color: $background-grey-light-trans;
+    /*para la altura de la cabecera, vamos a ahcer un calculo, esto permite que se quede fija siempre y que lo que haga scroll sea
+    la pantalla en si*/
+    height: calc(100vh - 130px);
+    //efecto sombra de la ventana principal
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    //evitar el scroll
+    overflow-y: scroll;
+    //quitar barra de scroll
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
